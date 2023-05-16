@@ -25,8 +25,8 @@ namespace KettleLearnMath
         private int Mode = 2;
         private int Sign_Question = 0;
         private int Sign_Ans = 0;
-        private int[,] Ans = new int[3, 3] { {0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
-        private int[,] Ans_Si = new int[2,2] { { 0, 0, }, { 0, 0, } };
+        private int[,] Ans = new int[3, 5] { {0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
+        private int[,] Ans_Si = new int[2,4] { { 0, 0, 0, 0, }, { 0, 0, 0, 0, } };
         private int Opt1 = 0;
         private int Opt2 = 0;
 
@@ -43,7 +43,7 @@ namespace KettleLearnMath
         {
             uiTB_Question1.Text = "";
             uiTB_Question2.Text = "";
-            Ans = new int[3, 3] { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
+            Ans = new int[3, 5] { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
         }
         void clear_Ans1()
         {
@@ -57,18 +57,29 @@ namespace KettleLearnMath
             uiTB_Ans1_1.Text = "";
             uiTB_Ans1_2.Text = "";
             uiTB_Ans1_3.Text = "";
+            uiTB_Ans1_4.Text = "";
+            
             uiTB_Ans2_1.Text = "";
             uiTB_Ans2_2.Text = "";
+            uiTB_Ans2_3.Text = "";
+            uiTB_Ans2_4.Text = "";
+
             uiTB_Ans3_1.Text = "";
             uiTB_Ans3_2.Text = "";
             uiTB_Ans3_3.Text = "";
+            uiTB_Ans3_4.Text = "";
+            uiTB_Ans3_5.Text = "";
 
             uiLine1.FillColor = Color.Transparent;
             uiTB_Ans_M_2.SymbolColor = Color.Transparent;
             uiTB_Ans_M_3.SymbolColor = Color.Transparent;
+            uiTB_Ans_M_4.SymbolColor = Color.Transparent;
+            uiTB_Ans_M_5.SymbolColor = Color.Transparent;
 
             uiTB_Ans_P_2.SymbolColor = Color.Transparent;
             uiTB_Ans_P_3.SymbolColor = Color.Transparent;
+            uiTB_Ans_P_4.SymbolColor = Color.Transparent;
+            uiTB_Ans_P_5.SymbolColor = Color.Transparent;
         }
         void Mode1(bool isEnable)
         {
@@ -85,20 +96,31 @@ namespace KettleLearnMath
             uiTB_Ans1_1.Visible = isEnable;
             uiTB_Ans1_2.Visible = isEnable;
             uiTB_Ans1_3.Visible = isEnable;
+            uiTB_Ans1_4.Visible = isEnable;
+
             uiTB_Ans2_1.Visible = isEnable;
             uiTB_Ans2_2.Visible = isEnable;
+            uiTB_Ans2_3.Visible = isEnable;
+            uiTB_Ans2_4.Visible = isEnable;
+
             uiTB_Ans3_1.Visible = isEnable;
             uiTB_Ans3_2.Visible = isEnable;
             uiTB_Ans3_3.Visible = isEnable;
+            uiTB_Ans3_4.Visible = isEnable;
+            uiTB_Ans3_5.Visible = isEnable;
 
             uiSl_Sign.Visible = isEnable;
             uiLine1.Visible = isEnable;
 
             uiTB_Ans_M_2.Visible = isEnable;
             uiTB_Ans_M_3.Visible = isEnable;
+            uiTB_Ans_M_4.Visible = isEnable;
+            uiTB_Ans_M_5.Visible = isEnable;
 
             uiTB_Ans_P_2.Visible = isEnable;
             uiTB_Ans_P_3.Visible = isEnable;
+            uiTB_Ans_P_4.Visible = isEnable;
+            uiTB_Ans_P_5.Visible = isEnable;
 
             //uiSBtn_Ok1.Visible = isEnable;
         }
@@ -130,7 +152,7 @@ namespace KettleLearnMath
         }
         void SetSign(object sender, int Sign)
         {
-            if (Sign == 0)
+            if (Sign == 0) //加法
                 ((Sunny.UI.UISymbolLabel)sender).Symbol = 61543;
             else
                 ((Sunny.UI.UISymbolLabel)sender).Symbol = 61544;
@@ -163,19 +185,19 @@ namespace KettleLearnMath
         }
         void GetQuestion()
         {
-            Ans = new int[3, 3] { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
-            Ans_Si = new int[2, 2] { { 0, 0, }, { 0, 0, } };
+            Ans = new int[3, 5] { { 0, 0, 0, 0, 0}, { 0, 0, 0, 0, 0}, { 0, 0, 0, 0, 0} };
+            Ans_Si = new int[2, 4] { { 0, 0, 0, 0}, { 0, 0, 0, 0} };
 
             if (uiRBtn_Random.Checked) GetMode();
 
-            Opt1 = GetRandom(20, 101);
+            Opt1 = GetRandom(20, 10000);
             uiTB_Question1.Text = Opt1.ToString();
 
             SetSign(uiSL_Sign_Question, GetSign());
 
             if(Sign_Question == 0)
             {
-                Opt2 = GetRandom(10, 100);
+                Opt2 = GetRandom(10, 10000);
             }
             else
             {
@@ -218,7 +240,7 @@ namespace KettleLearnMath
             clear_Ans1();
             clear_Ans2();
             clear_SI();
-            Ans_Si = new int[2, 2] { { 0, 0, }, { 0, 0, } };
+            Ans_Si = new int[2, 4] { { 0, 0, 0, 0, }, { 0, 0, 0, 0, } };
 
             TotalCount = 10;
             CurrentCount = 0;
@@ -269,6 +291,10 @@ namespace KettleLearnMath
             Ans_Si[0,1] = chengeSymbol(sender, e);
         }
 
+        private void uiTB_Ans_M_4_Click(object sender, EventArgs e)
+        {
+            Ans_Si[0,2] = chengeSymbol(sender, e);
+        }
 
         private void uiTB_Ans_P_2_Click(object sender, EventArgs e)
         {
@@ -280,9 +306,19 @@ namespace KettleLearnMath
             Ans_Si[1, 1] = chengeSymbol(sender, e);
         }
 
+        private void uiTB_Ans_P_4_Click(object sender, EventArgs e)
+        {
+            Ans_Si[1, 2] = chengeSymbol(sender, e);
+        }
+
+        private void uiTB_Ans_P_5_Click(object sender, EventArgs e)
+        {
+            Ans_Si[1, 3] = chengeSymbol(sender, e);
+        }
+
         private void uiSBtn_Start_Click(object sender, EventArgs e)
         {
-            if (CurrentCount > 0)
+            if (CurrentCount >= 0)
             {
                 reset();
                 switchMode(Mode);
@@ -348,14 +384,19 @@ namespace KettleLearnMath
         bool CheckMod2_Ans()
         {
             int tmp1 = Opt1, tmp2 = Opt2, tmp3 = 0, tmp4 = 0;
-            int[,] ExpectedResult = new int[3, 3];
+            int[,] ExpectedResult = new int[3, 5];
             int result = 0;
-            int[,] ExpectedSi = new int[2, 2] { { 0, 0, }, { 0, 0, } };
+            int[,] ExpectedSi = new int[2, 4] { { 0, 0, 0, 0}, { 0, 0, 0, 0} };
 
             Ans_Si[0, 0] = GetSi(uiTB_Ans_M_2);
             Ans_Si[0, 1] = GetSi(uiTB_Ans_M_3);
+            Ans_Si[0, 2] = GetSi(uiTB_Ans_M_4);
+            Ans_Si[0, 3] = GetSi(uiTB_Ans_M_5);
+
             Ans_Si[1, 0] = GetSi(uiTB_Ans_P_2);
             Ans_Si[1, 1] = GetSi(uiTB_Ans_P_3);
+            Ans_Si[1, 2] = GetSi(uiTB_Ans_P_4);
+            Ans_Si[1, 3] = GetSi(uiTB_Ans_P_5);
 
             if (Sign_Question == 0)
             {
@@ -367,11 +408,12 @@ namespace KettleLearnMath
             }
             tmp4 = tmp3;
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 ExpectedResult[0, i] = (tmp1 % 10);
                 ExpectedResult[1, i] = (tmp2 % 10);
                 ExpectedResult[2, i] = (tmp3 % 10);
+
                 tmp1 /= 10;
                 tmp2 /= 10;
                 tmp3 /= 10;
@@ -379,7 +421,7 @@ namespace KettleLearnMath
 
             for(int i = 0; i < 3; i++)
             {
-                for(int j = 0; j < 3; j++)
+                for(int j = 0; j < 5; j++)
                 {
                     result += (ExpectedResult[i, j] != Ans[i,j]) ? 1:0;
                 }
@@ -389,16 +431,20 @@ namespace KettleLearnMath
             {
                 if (ExpectedResult[0, 0] + ExpectedResult[1, 0] >= 10 ) ExpectedSi[1,0] = 1;
                 if ((ExpectedResult[0, 1] + ExpectedResult[1, 1] + ExpectedSi[1, 0]) >= 10) ExpectedSi[1, 1] = 1;
+                if ((ExpectedResult[0, 2] + ExpectedResult[1, 2] + ExpectedSi[1, 1]) >= 10) ExpectedSi[1, 2] = 1;
+                if ((ExpectedResult[0, 3] + ExpectedResult[1, 3] + ExpectedSi[1, 2]) >= 10) ExpectedSi[1, 3] = 1;
             }
             else if (Sign_Question == 1)
             {
                 if (ExpectedResult[0, 0] < ExpectedResult[1, 0] ) ExpectedSi[0, 0] = 1;
                 if (ExpectedResult[0, 1] <(ExpectedResult[1, 1] + ExpectedSi[0, 0])) ExpectedSi[0, 1] = 1;
+                if (ExpectedResult[0, 2] <(ExpectedResult[1, 2] + ExpectedSi[0, 1])) ExpectedSi[0, 2] = 1;
+                if (ExpectedResult[0, 3] <(ExpectedResult[1, 3] + ExpectedSi[0, 2])) ExpectedSi[0, 3] = 1;
             }
 
             for (int i = 0; i < 2; i++)
             {
-                for (int j = 0; j < 2; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     result += (ExpectedSi[i, j] != Ans_Si[i, j]) ? 1 : 0;
                 }
@@ -471,7 +517,7 @@ namespace KettleLearnMath
                         }
                     }
                     isFixNeeded = true;
-                    Sunny.UI.UIMessageTip.ShowOk(uiSBtn_NextQuestion, "订正完再做下一题！");
+                    Sunny.UI.UIMessageTip.ShowOk(uiSBtn_NextQuestion, "有错误哦，不要放过它，赶紧订正完再做下一题！", 5000);
                 }
 
                 if (!isFixNeeded && CurrentCount >= TotalCount/2)
@@ -527,13 +573,17 @@ namespace KettleLearnMath
 
         private void uiTB_Ans1_2_TextChanged(object sender, EventArgs e)
         {
-
             Ans[0, 1] = uiTB_Ans1_2.IntValue;
         }
 
         private void uiTB_Ans1_3_TextChanged(object sender, EventArgs e)
         {
             Ans[0, 2] = uiTB_Ans1_3.IntValue;
+        }
+
+        private void uiTB_Ans1_4_TextChanged(object sender, EventArgs e)
+        {
+            Ans[0, 3] = uiTB_Ans1_4.IntValue;
         }
 
         private void uiTB_Ans2_1_TextChanged(object sender, EventArgs e)
@@ -544,6 +594,15 @@ namespace KettleLearnMath
         private void uiTB_Ans2_2_TextChanged(object sender, EventArgs e)
         {
             Ans[1, 1] = uiTB_Ans2_2.IntValue;
+        }
+        private void uiTB_Ans2_3_TextChanged(object sender, EventArgs e)
+        {
+            Ans[1, 2] = uiTB_Ans2_3.IntValue;
+        }
+
+        private void uiTB_Ans2_4_TextChanged(object sender, EventArgs e)
+        {
+            Ans[1, 3] = uiTB_Ans2_4.IntValue;
         }
 
         private void uiTB_Ans3_1_TextChanged(object sender, EventArgs e)
@@ -561,6 +620,16 @@ namespace KettleLearnMath
             Ans[2, 2] = uiTB_Ans3_3.IntValue;
         }
 
+        private void uiTB_Ans3_4_TextChanged(object sender, EventArgs e)
+        {
+            Ans[2, 3] = uiTB_Ans3_4.IntValue;
+        }
+
+        private void uiTB_Ans3_5_TextChanged(object sender, EventArgs e)
+        {
+            Ans[2, 4] = uiTB_Ans3_5.IntValue;
+        }
+
         private void uiRBtn_Horizental_CheckedChanged(object sender, EventArgs e)
         {
             Mode = 1;
@@ -576,5 +645,6 @@ namespace KettleLearnMath
         private void uiRBtn_Random_CheckedChanged(object sender, EventArgs e)
         {
         }
+
     }
 }
