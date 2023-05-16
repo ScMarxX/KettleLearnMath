@@ -10,9 +10,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mark Xu")]
 [assembly: AssemblyProduct("$TAGETNAME$")]
-[assembly: AssemblyCopyright("Copyright © 2003 Mark XU 2023.")]
+[assembly: AssemblyCopyright("Copyright © 2003 Mark Xu 2023.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: FSLib.App.SimpleUpdater.Updateable("http://scm.name:8888/klm/update_c.xml")]
 
 // 将 ComVisible 设置为 false 使此程序集中的类型
 // 对 COM 组件不可见。如果需要从 COM 访问此程序集中的类型，

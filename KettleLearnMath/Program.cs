@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FSLib.App;
 
 namespace KettleLearnMath
 {
@@ -16,6 +17,9 @@ namespace KettleLearnMath
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            var updater = FSLib.App.SimpleUpdater.Updater.Instance;
+            FSLib.App.SimpleUpdater.Updater.CheckUpdateSimple("http://scm.name:8888/klm/update_c.xml");
             Application.Run(new MainForm());
         }
     }
