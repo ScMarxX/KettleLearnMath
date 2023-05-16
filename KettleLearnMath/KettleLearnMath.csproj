@@ -128,7 +128,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
+    <PreBuildEvent>powershell -ExecutionPolicy ByPass -File $(SolutionDir)\tools\BuildScripts\InjectGitVersion.ps1 $(SolutionDir)\tools\BuildScripts $(ProjectDir) $(TargetName)</PreBuildEvent>
   </PropertyGroup>
 </Project>
