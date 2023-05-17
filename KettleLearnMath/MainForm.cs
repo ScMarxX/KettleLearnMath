@@ -22,9 +22,9 @@ namespace KettleLearnMath
         private int CorrectCount = 0;
         private int WrongCount = 0;
 
-        private int Mode = 2;
-        private int Sign_Question = 0;
-        private int Sign_Ans = 0;
+        private EquationType EqType = EquationType.Vertical;
+        private Operator Oper_Question = Operator.Division;
+        private Operator Oper_Ans = 0;
         private int[,] Ans = new int[3, 5] { {0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
         private int[,] Ans_Si = new int[2,4] { { 0, 0, 0, 0, }, { 0, 0, 0, 0, } };
         private int Opt1 = 0;
@@ -37,7 +37,7 @@ namespace KettleLearnMath
         {
             
             reset();
-            switchMode(Mode);
+            switchEquationType(EqType);
         }
         void clear_Ask()
         {
@@ -81,7 +81,7 @@ namespace KettleLearnMath
             uiTB_Ans_P_4.SymbolColor = Color.Transparent;
             uiTB_Ans_P_5.SymbolColor = Color.Transparent;
         }
-        void Mode1(bool isEnable)
+        void ModeHorizontal(bool isEnable)
         {
             clear_Ans1();
 
@@ -89,7 +89,7 @@ namespace KettleLearnMath
 
             //uiSBtn_Ok1.Visible = isEnable;
         }
-        void Mode2(bool isEnable)
+        void ModeVertical(bool isEnable)
         {
             clear_Ans2();
 
@@ -109,7 +109,7 @@ namespace KettleLearnMath
             uiTB_Ans3_4.Visible = isEnable;
             uiTB_Ans3_5.Visible = isEnable;
 
-            uiSl_Sign.Visible = isEnable;
+            uiSl_Oper.Visible = isEnable;
             uiLine1.Visible = isEnable;
 
             uiTB_Ans_M_2.Visible = isEnable;
@@ -124,58 +124,71 @@ namespace KettleLearnMath
 
             //uiSBtn_Ok1.Visible = isEnable;
         }
-        void switchMode(int mode)
+        enum Operator:int
         {
-            switch(mode)
+            Addition = 0,
+            Subtraction,
+            Multiplication,
+            Division,
+        }
+        enum EquationType:int
+        {
+            Horizontal = 1,
+            Vertical,
+        }
+
+        void switchEquationType(EquationType type)
+        {
+            switch(type)
             {
-                case 1:
-                    Mode1(true);
-                    Mode2(false);
+                case EquationType.Horizontal:
+                    ModeHorizontal(true);
+                    ModeVertical(false);
                     break;
-                case 2:
-                    Mode1(false);
-                    Mode2(true);
+                case EquationType.Vertical:
+                    ModeHorizontal(false);
+                    ModeVertical(true);
                     break;
             }
         }
 
-        int GetMode()
+        EquationType GetEquationType()
         {
-            Mode = GetRandom(1,3);
-            switchMode(Mode);
-            return Mode;
+            EqType = (EquationType)GetRandom(1, 3);
+            switchEquationType(EqType);
+            return EqType;
         }
-        int GetSign()
+        Operator GenOperator()
         {
-            Sign_Question = GetRandom(0,2);
-            return Sign_Question;
+            Oper_Question = (Operator) GetRandom(0,2);
+            return Oper_Question;
         }
-        void SetSign(object sender, int Sign)
+        void SetOperator(object sender, Operator Op)
         {
-            if (Sign == 0) //加法
+            if (Op == Operator.Addition) //加法
                 ((Sunny.UI.UISymbolLabel)sender).Symbol = 61543;
             else
                 ((Sunny.UI.UISymbolLabel)sender).Symbol = 61544;
         }
 
-        int RevertSign(object sender)
+        Operator RevertOper(object sender)
         {
-            int sign = 0;
+            Operator sign = Operator.Addition;
             if (((Sunny.UI.UISymbolLabel)sender).Symbol == 61543)
             {
                 ((Sunny.UI.UISymbolLabel)sender).Symbol = 61544;
-                sign = 1;
+                sign = Operator.Subtraction;
             }
             else if (((Sunny.UI.UISymbolLabel)sender).Symbol == 61544)
             {
                 ((Sunny.UI.UISymbolLabel)sender).Symbol = 61543;
-                sign = 0;
+                sign = Operator.Addition;
             }
             return sign;
         }
-        void RevertSign(object sender, ref int Sign)
+        void RevertOper(object sender, ref Operator Oper)
         {
-            Sign = RevertSign(sender);
+            Oper = RevertOper(sender);
         }
 
         int GetRandom(int min, int max)
@@ -188,14 +201,14 @@ namespace KettleLearnMath
             Ans = new int[3, 5] { { 0, 0, 0, 0, 0}, { 0, 0, 0, 0, 0}, { 0, 0, 0, 0, 0} };
             Ans_Si = new int[2, 4] { { 0, 0, 0, 0}, { 0, 0, 0, 0} };
 
-            if (uiRBtn_Random.Checked) GetMode();
+            if (uiRBtn_Random.Checked) GetEquationType();
 
             Opt1 = GetRandom(20, 10000);
             uiTB_Question1.Text = Opt1.ToString();
 
-            SetSign(uiSL_Sign_Question, GetSign());
+            SetOperator(uiSL_Oper_Question, GenOperator());
 
-            if(Sign_Question == 0)
+            if(Oper_Question == 0)
             {
                 Opt2 = GetRandom(10, 10000);
             }
@@ -218,7 +231,7 @@ namespace KettleLearnMath
 
         void clear_turtle()
         {
-            uiIBtn_Turtle.Location = new Point(514, 801);
+            uiIBtn_Turtle.Location = new Point(476, 780);
         }
 
         void Update_Tips()
@@ -252,9 +265,9 @@ namespace KettleLearnMath
             Update_Tips();
         }
 
-        private void uiSl_Sign_Click(object sender, EventArgs e)
+        private void uiSl_Oper_Click(object sender, EventArgs e)
         {
-            RevertSign(sender, ref Sign_Ans);
+            RevertOper(sender, ref Oper_Ans);
         }
         int chengeSymbol(object sender, EventArgs e)
         {
@@ -321,7 +334,7 @@ namespace KettleLearnMath
             if (CurrentCount >= 0)
             {
                 reset();
-                switchMode(Mode);
+                switchEquationType(EqType);
             }
 
             GetQuestion();
@@ -329,16 +342,16 @@ namespace KettleLearnMath
 
         private void uiSBtn_NextQuestion_Click(object sender, EventArgs e)
         {
-            if (Mode == 1)
-                CheckResult(CheckMod1_Ans());
+            if (EqType == EquationType.Horizontal)
+                CheckResult(CheckHorizontal_Ans());
             else
-                CheckResult(CheckMod2_Ans());
+                CheckResult(CheckVertical_Ans());
 
             if (!isFixNeeded)
             {
                 Update_Tips();
 
-                if (Mode == 1)
+                if (EqType == EquationType.Horizontal)
                 {
                     clear_Ans1();
                 }
@@ -348,23 +361,23 @@ namespace KettleLearnMath
                     clear_Ans2();
                 }
 
-                switchMode(Mode);
+                switchEquationType(EqType);
 
                 GetQuestion();
             }
         }
 
-        bool CheckMod1_Ans()
+        bool CheckHorizontal_Ans()
         {
             bool result = false;
-            if (Sign_Question == 0)
+            if (Oper_Question == Operator.Addition)
             {
                 if (Opt1 + Opt2 == uiTB_Ans.IntValue)
                     result = false;
                 else
                     result = true;
             }
-            else if (Sign_Question == 1)
+            else if (Oper_Question == Operator.Subtraction)
             {
                 if ((Opt1 - Opt2) == uiTB_Ans.IntValue)
                     result = false;
@@ -381,7 +394,7 @@ namespace KettleLearnMath
             uiTB_Ans_P_2.SymbolColor = Color.Transparent;
             uiTB_Ans_P_3.SymbolColor = Color.Transparent;
         }
-        bool CheckMod2_Ans()
+        bool CheckVertical_Ans()
         {
             int tmp1 = Opt1, tmp2 = Opt2, tmp3 = 0, tmp4 = 0;
             int[,] ExpectedResult = new int[3, 5];
@@ -398,11 +411,11 @@ namespace KettleLearnMath
             Ans_Si[1, 2] = GetSi(uiTB_Ans_P_4);
             Ans_Si[1, 3] = GetSi(uiTB_Ans_P_5);
 
-            if (Sign_Question == 0)
+            if (Oper_Question == Operator.Addition)
             {
                 tmp3 = Opt1 + Opt2;
             }
-            else if (Sign_Question == 1)
+            else if (Oper_Question == Operator.Subtraction)
             {
                 tmp3 = Opt1 - Opt2;
             }
@@ -427,14 +440,14 @@ namespace KettleLearnMath
                 }
             }
 
-            if (Sign_Question == 0)
+            if (Oper_Question == Operator.Addition)
             {
                 if (ExpectedResult[0, 0] + ExpectedResult[1, 0] >= 10 ) ExpectedSi[1,0] = 1;
                 if ((ExpectedResult[0, 1] + ExpectedResult[1, 1] + ExpectedSi[1, 0]) >= 10) ExpectedSi[1, 1] = 1;
                 if ((ExpectedResult[0, 2] + ExpectedResult[1, 2] + ExpectedSi[1, 1]) >= 10) ExpectedSi[1, 2] = 1;
                 if ((ExpectedResult[0, 3] + ExpectedResult[1, 3] + ExpectedSi[1, 2]) >= 10) ExpectedSi[1, 3] = 1;
             }
-            else if (Sign_Question == 1)
+            else if (Oper_Question == Operator.Subtraction)
             {
                 if (ExpectedResult[0, 0] < ExpectedResult[1, 0] ) ExpectedSi[0, 0] = 1;
                 if (ExpectedResult[0, 1] <(ExpectedResult[1, 1] + ExpectedSi[0, 0])) ExpectedSi[0, 1] = 1;
@@ -449,7 +462,7 @@ namespace KettleLearnMath
                     result += (ExpectedSi[i, j] != Ans_Si[i, j]) ? 1 : 0;
                 }
             }
-            result += (uiSl_Sign.Symbol == uiSL_Sign_Question.Symbol? 0 : 1);
+            result += (uiSl_Oper.Symbol == uiSL_Oper_Question.Symbol? 0 : 1);
             return (result == 0);
         }
 
@@ -468,7 +481,7 @@ namespace KettleLearnMath
                         CurrentCount++;
                         CorrectCount++;
                         if (uiIBtn_Rabit.Location.X <= uiIBtn_Flag.Location.X)
-                            uiIBtn_Rabit.Location = new Point(uiIBtn_Rabit.Location.X + 160, uiIBtn_Rabit.Location.Y);
+                            uiIBtn_Rabit.Location = new Point(uiIBtn_Rabit.Location.X + 80, uiIBtn_Rabit.Location.Y);
 
                         if (uiIBtn_Turtle.Location.X > uiIBtn_Rabit.Location.X + 500)
                         {
@@ -491,13 +504,12 @@ namespace KettleLearnMath
                 }                
                 else
                 {
-
                     if (!isFixNeeded)
                     {
                         CurrentCount++;
                         WrongCount++;
                         if (uiIBtn_Turtle.Location.X <= uiIBtn_Flag.Location.X)
-                            uiIBtn_Turtle.Location = new Point(uiIBtn_Turtle.Location.X + 98, uiIBtn_Turtle.Location.Y);
+                            uiIBtn_Turtle.Location = new Point(uiIBtn_Turtle.Location.X + 60, uiIBtn_Turtle.Location.Y);
 
                         if (uiIBtn_Turtle.Location.X > uiIBtn_Rabit.Location.X + 500)
                         {
@@ -543,7 +555,6 @@ namespace KettleLearnMath
                             Sunny.UI.UIMessageTip.ShowOk(uiIBtn_Flag, "恭喜小乌龟、小兔子并列获胜！", 6000);
                         else
                             Sunny.UI.UIMessageTip.ShowOk(uiIBtn_Flag, "哎呦，居然是齐头并进。", 6000);
-
                     }
                 }
             }
@@ -551,10 +562,10 @@ namespace KettleLearnMath
         }
         private void uiSBtn_Ok1_Click(object sender, EventArgs e)
         {
-            if (Mode == 1)
-                CheckResult(CheckMod1_Ans());
+            if (EqType == EquationType.Horizontal)
+                CheckResult(CheckHorizontal_Ans());
             else
-                CheckResult(CheckMod2_Ans());
+                CheckResult(CheckVertical_Ans());
 
             Update_Tips();
         }
@@ -632,14 +643,14 @@ namespace KettleLearnMath
 
         private void uiRBtn_Horizental_CheckedChanged(object sender, EventArgs e)
         {
-            Mode = 1;
-            switchMode(Mode);
+            EqType = EquationType.Horizontal;
+            switchEquationType(EqType);
         }
 
         private void uiRBtn_Vertical_CheckedChanged(object sender, EventArgs e)
         {
-            Mode = 2;
-            switchMode(Mode);
+            EqType = EquationType.Vertical;
+            switchEquationType(EqType);
         }
 
         private void uiRBtn_Random_CheckedChanged(object sender, EventArgs e)

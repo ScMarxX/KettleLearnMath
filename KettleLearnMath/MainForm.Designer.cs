@@ -54,10 +54,10 @@
             this.uiSymbolLabel10 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel9 = new Sunny.UI.UISymbolLabel();
             this.uiSL_Equal = new Sunny.UI.UISymbolLabel();
-            this.uiSL_Sign_Question = new Sunny.UI.UISymbolLabel();
+            this.uiSL_Oper_Question = new Sunny.UI.UISymbolLabel();
             this.uiTB_Question2 = new Sunny.UI.UITextBox();
             this.uiTB_Question1 = new Sunny.UI.UITextBox();
-            this.uiSl_Sign = new Sunny.UI.UISymbolLabel();
+            this.uiSl_Oper = new Sunny.UI.UISymbolLabel();
             this.uiSL_TotalCount = new Sunny.UI.UISymbolLabel();
             this.uiTB_Ans3_3 = new Sunny.UI.UITextBox();
             this.uiTB_Ans_M_3 = new Sunny.UI.UISymbolLabel();
@@ -84,7 +84,7 @@
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.Transparent;
             this.uiPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uiPanel1.BackgroundImage")));
-            this.uiPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.uiPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.uiPanel1.Controls.Add(this.uiTB_Ans_M_5);
             this.uiPanel1.Controls.Add(this.uiTB_Ans_P_5);
             this.uiPanel1.Controls.Add(this.uiTB_Ans3_5);
@@ -109,10 +109,10 @@
             this.uiPanel1.Controls.Add(this.uiSymbolLabel10);
             this.uiPanel1.Controls.Add(this.uiSymbolLabel9);
             this.uiPanel1.Controls.Add(this.uiSL_Equal);
-            this.uiPanel1.Controls.Add(this.uiSL_Sign_Question);
+            this.uiPanel1.Controls.Add(this.uiSL_Oper_Question);
             this.uiPanel1.Controls.Add(this.uiTB_Question2);
             this.uiPanel1.Controls.Add(this.uiTB_Question1);
-            this.uiPanel1.Controls.Add(this.uiSl_Sign);
+            this.uiPanel1.Controls.Add(this.uiSl_Oper);
             this.uiPanel1.Controls.Add(this.uiSL_TotalCount);
             this.uiPanel1.Controls.Add(this.uiTB_Ans3_3);
             this.uiPanel1.Controls.Add(this.uiTB_Ans_M_3);
@@ -137,7 +137,7 @@
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(1920, 997);
+            this.uiPanel1.Size = new System.Drawing.Size(1280, 997);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.TabIndex = 2;
             this.uiPanel1.Text = null;
@@ -146,7 +146,7 @@
             // uiTB_Ans_M_5
             // 
             this.uiTB_Ans_M_5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_M_5.Location = new System.Drawing.Point(1034, 208);
+            this.uiTB_Ans_M_5.Location = new System.Drawing.Point(226, 257);
             this.uiTB_Ans_M_5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_M_5.Name = "uiTB_Ans_M_5";
             this.uiTB_Ans_M_5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -155,11 +155,12 @@
             this.uiTB_Ans_M_5.Symbol = 61713;
             this.uiTB_Ans_M_5.SymbolSize = 8;
             this.uiTB_Ans_M_5.TabIndex = 39;
+            this.uiTB_Ans_M_5.TabStop = false;
             // 
             // uiTB_Ans_P_5
             // 
             this.uiTB_Ans_P_5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_P_5.Location = new System.Drawing.Point(1044, 332);
+            this.uiTB_Ans_P_5.Location = new System.Drawing.Point(236, 381);
             this.uiTB_Ans_P_5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_P_5.Name = "uiTB_Ans_P_5";
             this.uiTB_Ans_P_5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -167,7 +168,8 @@
             this.uiTB_Ans_P_5.Style = Sunny.UI.UIStyle.Custom;
             this.uiTB_Ans_P_5.Symbol = 61713;
             this.uiTB_Ans_P_5.SymbolSize = 8;
-            this.uiTB_Ans_P_5.TabIndex = 38;
+            this.uiTB_Ans_P_5.TabIndex = 23;
+            this.uiTB_Ans_P_5.TabStop = false;
             this.uiTB_Ans_P_5.Click += new System.EventHandler(this.uiTB_Ans_P_5_Click);
             // 
             // uiTB_Ans3_5
@@ -177,14 +179,14 @@
             this.uiTB_Ans3_5.DoubleValue = 4D;
             this.uiTB_Ans3_5.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans3_5.IntValue = 4;
-            this.uiTB_Ans3_5.Location = new System.Drawing.Point(1034, 392);
+            this.uiTB_Ans3_5.Location = new System.Drawing.Point(226, 441);
             this.uiTB_Ans3_5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans3_5.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans3_5.Name = "uiTB_Ans3_5";
             this.uiTB_Ans3_5.ShowText = false;
             this.uiTB_Ans3_5.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans3_5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans3_5.TabIndex = 37;
+            this.uiTB_Ans3_5.TabIndex = 14;
             this.uiTB_Ans3_5.Text = "4";
             this.uiTB_Ans3_5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans3_5.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -199,14 +201,14 @@
             this.uiTB_Ans2_4.DoubleValue = 4D;
             this.uiTB_Ans2_4.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans2_4.IntValue = 4;
-            this.uiTB_Ans2_4.Location = new System.Drawing.Point(1085, 291);
+            this.uiTB_Ans2_4.Location = new System.Drawing.Point(277, 340);
             this.uiTB_Ans2_4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans2_4.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans2_4.Name = "uiTB_Ans2_4";
             this.uiTB_Ans2_4.ShowText = false;
             this.uiTB_Ans2_4.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans2_4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans2_4.TabIndex = 36;
+            this.uiTB_Ans2_4.TabIndex = 6;
             this.uiTB_Ans2_4.Text = "4";
             this.uiTB_Ans2_4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans2_4.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -221,14 +223,14 @@
             this.uiTB_Ans3_4.DoubleValue = 4D;
             this.uiTB_Ans3_4.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans3_4.IntValue = 4;
-            this.uiTB_Ans3_4.Location = new System.Drawing.Point(1085, 392);
+            this.uiTB_Ans3_4.Location = new System.Drawing.Point(277, 441);
             this.uiTB_Ans3_4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans3_4.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans3_4.Name = "uiTB_Ans3_4";
             this.uiTB_Ans3_4.ShowText = false;
             this.uiTB_Ans3_4.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans3_4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans3_4.TabIndex = 33;
+            this.uiTB_Ans3_4.TabIndex = 13;
             this.uiTB_Ans3_4.Text = "4";
             this.uiTB_Ans3_4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans3_4.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -239,7 +241,7 @@
             // uiTB_Ans_M_4
             // 
             this.uiTB_Ans_M_4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_M_4.Location = new System.Drawing.Point(1084, 208);
+            this.uiTB_Ans_M_4.Location = new System.Drawing.Point(276, 257);
             this.uiTB_Ans_M_4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_M_4.Name = "uiTB_Ans_M_4";
             this.uiTB_Ans_M_4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -247,7 +249,8 @@
             this.uiTB_Ans_M_4.Style = Sunny.UI.UIStyle.Custom;
             this.uiTB_Ans_M_4.Symbol = 61713;
             this.uiTB_Ans_M_4.SymbolSize = 8;
-            this.uiTB_Ans_M_4.TabIndex = 34;
+            this.uiTB_Ans_M_4.TabIndex = 19;
+            this.uiTB_Ans_M_4.TabStop = false;
             this.uiTB_Ans_M_4.Click += new System.EventHandler(this.uiTB_Ans_M_4_Click);
             // 
             // uiTB_Ans1_4
@@ -257,14 +260,14 @@
             this.uiTB_Ans1_4.DoubleValue = 4D;
             this.uiTB_Ans1_4.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans1_4.IntValue = 4;
-            this.uiTB_Ans1_4.Location = new System.Drawing.Point(1085, 231);
+            this.uiTB_Ans1_4.Location = new System.Drawing.Point(277, 280);
             this.uiTB_Ans1_4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans1_4.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans1_4.Name = "uiTB_Ans1_4";
             this.uiTB_Ans1_4.ShowText = false;
             this.uiTB_Ans1_4.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans1_4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans1_4.TabIndex = 32;
+            this.uiTB_Ans1_4.TabIndex = 2;
             this.uiTB_Ans1_4.Text = "4";
             this.uiTB_Ans1_4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans1_4.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -275,7 +278,7 @@
             // uiTB_Ans_P_4
             // 
             this.uiTB_Ans_P_4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_P_4.Location = new System.Drawing.Point(1107, 332);
+            this.uiTB_Ans_P_4.Location = new System.Drawing.Point(299, 381);
             this.uiTB_Ans_P_4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_P_4.Name = "uiTB_Ans_P_4";
             this.uiTB_Ans_P_4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -283,7 +286,8 @@
             this.uiTB_Ans_P_4.Style = Sunny.UI.UIStyle.Custom;
             this.uiTB_Ans_P_4.Symbol = 61713;
             this.uiTB_Ans_P_4.SymbolSize = 8;
-            this.uiTB_Ans_P_4.TabIndex = 35;
+            this.uiTB_Ans_P_4.TabIndex = 22;
+            this.uiTB_Ans_P_4.TabStop = false;
             this.uiTB_Ans_P_4.Click += new System.EventHandler(this.uiTB_Ans_P_4_Click);
             // 
             // uiTB_Ans2_3
@@ -293,14 +297,14 @@
             this.uiTB_Ans2_3.DoubleValue = 4D;
             this.uiTB_Ans2_3.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans2_3.IntValue = 4;
-            this.uiTB_Ans2_3.Location = new System.Drawing.Point(1137, 291);
+            this.uiTB_Ans2_3.Location = new System.Drawing.Point(329, 340);
             this.uiTB_Ans2_3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans2_3.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans2_3.Name = "uiTB_Ans2_3";
             this.uiTB_Ans2_3.ShowText = false;
             this.uiTB_Ans2_3.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans2_3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans2_3.TabIndex = 31;
+            this.uiTB_Ans2_3.TabIndex = 7;
             this.uiTB_Ans2_3.Text = "4";
             this.uiTB_Ans2_3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans2_3.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -312,7 +316,7 @@
             // 
             this.uiRBtn_Random.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiRBtn_Random.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiRBtn_Random.Location = new System.Drawing.Point(260, 103);
+            this.uiRBtn_Random.Location = new System.Drawing.Point(310, 47);
             this.uiRBtn_Random.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRBtn_Random.Name = "uiRBtn_Random";
             this.uiRBtn_Random.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -328,7 +332,7 @@
             this.uiRBtn_Vertical.Checked = true;
             this.uiRBtn_Vertical.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiRBtn_Vertical.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiRBtn_Vertical.Location = new System.Drawing.Point(168, 103);
+            this.uiRBtn_Vertical.Location = new System.Drawing.Point(218, 47);
             this.uiRBtn_Vertical.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRBtn_Vertical.Name = "uiRBtn_Vertical";
             this.uiRBtn_Vertical.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -343,7 +347,7 @@
             // 
             this.uiRBtn_Horizental.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiRBtn_Horizental.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiRBtn_Horizental.Location = new System.Drawing.Point(84, 103);
+            this.uiRBtn_Horizental.Location = new System.Drawing.Point(134, 47);
             this.uiRBtn_Horizental.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRBtn_Horizental.Name = "uiRBtn_Horizental";
             this.uiRBtn_Horizental.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -373,13 +377,13 @@
             // 
             this.uiSBtn_NextQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSBtn_NextQuestion.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSBtn_NextQuestion.Location = new System.Drawing.Point(826, 401);
+            this.uiSBtn_NextQuestion.Location = new System.Drawing.Point(390, 562);
             this.uiSBtn_NextQuestion.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSBtn_NextQuestion.Name = "uiSBtn_NextQuestion";
             this.uiSBtn_NextQuestion.Size = new System.Drawing.Size(117, 41);
             this.uiSBtn_NextQuestion.Style = Sunny.UI.UIStyle.Custom;
             this.uiSBtn_NextQuestion.Symbol = 62105;
-            this.uiSBtn_NextQuestion.TabIndex = 16;
+            this.uiSBtn_NextQuestion.TabIndex = 15;
             this.uiSBtn_NextQuestion.Text = "下一题";
             this.uiSBtn_NextQuestion.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSBtn_NextQuestion.Click += new System.EventHandler(this.uiSBtn_NextQuestion_Click);
@@ -387,7 +391,7 @@
             // uiSL_WrongCount
             // 
             this.uiSL_WrongCount.Font = new System.Drawing.Font("微软雅黑", 24F);
-            this.uiSL_WrongCount.Location = new System.Drawing.Point(1514, 351);
+            this.uiSL_WrongCount.Location = new System.Drawing.Point(951, 227);
             this.uiSL_WrongCount.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSL_WrongCount.Name = "uiSL_WrongCount";
             this.uiSL_WrongCount.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
@@ -396,6 +400,7 @@
             this.uiSL_WrongCount.Symbol = 61722;
             this.uiSL_WrongCount.SymbolSize = 48;
             this.uiSL_WrongCount.TabIndex = 23;
+            this.uiSL_WrongCount.TabStop = false;
             this.uiSL_WrongCount.Text = "错误：";
             this.uiSL_WrongCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -403,13 +408,13 @@
             // 
             this.uiSBtn_Ok1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSBtn_Ok1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSBtn_Ok1.Location = new System.Drawing.Point(826, 353);
+            this.uiSBtn_Ok1.Location = new System.Drawing.Point(230, 562);
             this.uiSBtn_Ok1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSBtn_Ok1.Name = "uiSBtn_Ok1";
             this.uiSBtn_Ok1.Size = new System.Drawing.Size(117, 41);
             this.uiSBtn_Ok1.Style = Sunny.UI.UIStyle.Custom;
             this.uiSBtn_Ok1.Symbol = 61961;
-            this.uiSBtn_Ok1.TabIndex = 15;
+            this.uiSBtn_Ok1.TabIndex = 16;
             this.uiSBtn_Ok1.Text = "作答完毕";
             this.uiSBtn_Ok1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiSBtn_Ok1.Click += new System.EventHandler(this.uiSBtn_Ok1_Click);
@@ -421,7 +426,7 @@
             this.uiTB_Ans.DoubleValue = 4D;
             this.uiTB_Ans.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans.IntValue = 4;
-            this.uiTB_Ans.Location = new System.Drawing.Point(831, 231);
+            this.uiTB_Ans.Location = new System.Drawing.Point(210, 191);
             this.uiTB_Ans.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans.Name = "uiTB_Ans";
@@ -438,13 +443,13 @@
             // 
             this.uiSBtn_Start.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiSBtn_Start.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSBtn_Start.Location = new System.Drawing.Point(84, 401);
+            this.uiSBtn_Start.Location = new System.Drawing.Point(69, 562);
             this.uiSBtn_Start.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSBtn_Start.Name = "uiSBtn_Start";
             this.uiSBtn_Start.Size = new System.Drawing.Size(117, 41);
             this.uiSBtn_Start.Style = Sunny.UI.UIStyle.Custom;
             this.uiSBtn_Start.Symbol = 61473;
-            this.uiSBtn_Start.TabIndex = 16;
+            this.uiSBtn_Start.TabIndex = 24;
             this.uiSBtn_Start.TabStop = false;
             this.uiSBtn_Start.Text = "重新开始";
             this.uiSBtn_Start.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -453,7 +458,7 @@
             // uiSL_CorrectCount
             // 
             this.uiSL_CorrectCount.Font = new System.Drawing.Font("微软雅黑", 24F);
-            this.uiSL_CorrectCount.Location = new System.Drawing.Point(1514, 313);
+            this.uiSL_CorrectCount.Location = new System.Drawing.Point(951, 189);
             this.uiSL_CorrectCount.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSL_CorrectCount.Name = "uiSL_CorrectCount";
             this.uiSL_CorrectCount.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
@@ -462,13 +467,14 @@
             this.uiSL_CorrectCount.Symbol = 61585;
             this.uiSL_CorrectCount.SymbolSize = 48;
             this.uiSL_CorrectCount.TabIndex = 20;
+            this.uiSL_CorrectCount.TabStop = false;
             this.uiSL_CorrectCount.Text = "正确：";
             this.uiSL_CorrectCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiSL_CurrentCount
             // 
             this.uiSL_CurrentCount.Font = new System.Drawing.Font("微软雅黑", 24F);
-            this.uiSL_CurrentCount.Location = new System.Drawing.Point(1514, 272);
+            this.uiSL_CurrentCount.Location = new System.Drawing.Point(951, 148);
             this.uiSL_CurrentCount.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSL_CurrentCount.Name = "uiSL_CurrentCount";
             this.uiSL_CurrentCount.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
@@ -477,13 +483,14 @@
             this.uiSL_CurrentCount.Symbol = 61484;
             this.uiSL_CurrentCount.SymbolSize = 48;
             this.uiSL_CurrentCount.TabIndex = 19;
+            this.uiSL_CurrentCount.TabStop = false;
             this.uiSL_CurrentCount.Text = "完成：";
             this.uiSL_CurrentCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiSymbolLabel11
             // 
             this.uiSymbolLabel11.Font = new System.Drawing.Font("微软雅黑", 24F);
-            this.uiSymbolLabel11.Location = new System.Drawing.Point(657, 231);
+            this.uiSymbolLabel11.Location = new System.Drawing.Point(55, 191);
             this.uiSymbolLabel11.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel11.Name = "uiSymbolLabel11";
             this.uiSymbolLabel11.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
@@ -493,12 +500,13 @@
             this.uiSymbolLabel11.SymbolSize = 48;
             this.uiSymbolLabel11.TabIndex = 18;
             this.uiSymbolLabel11.TabStop = false;
-            this.uiSymbolLabel11.Text = "解答：";
+            this.uiSymbolLabel11.Text = "答：";
+            this.uiSymbolLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiSymbolLabel10
             // 
             this.uiSymbolLabel10.Font = new System.Drawing.Font("微软雅黑", 24F);
-            this.uiSymbolLabel10.Location = new System.Drawing.Point(55, 231);
+            this.uiSymbolLabel10.Location = new System.Drawing.Point(55, 116);
             this.uiSymbolLabel10.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel10.Name = "uiSymbolLabel10";
             this.uiSymbolLabel10.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
@@ -508,12 +516,13 @@
             this.uiSymbolLabel10.SymbolSize = 48;
             this.uiSymbolLabel10.TabIndex = 17;
             this.uiSymbolLabel10.TabStop = false;
-            this.uiSymbolLabel10.Text = "问题：";
+            this.uiSymbolLabel10.Text = "问：";
+            this.uiSymbolLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiSymbolLabel9
             // 
             this.uiSymbolLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolLabel9.Location = new System.Drawing.Point(526, 229);
+            this.uiSymbolLabel9.Location = new System.Drawing.Point(526, 114);
             this.uiSymbolLabel9.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel9.Name = "uiSymbolLabel9";
             this.uiSymbolLabel9.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
@@ -527,7 +536,7 @@
             // uiSL_Equal
             // 
             this.uiSL_Equal.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSL_Equal.Location = new System.Drawing.Point(487, 231);
+            this.uiSL_Equal.Location = new System.Drawing.Point(487, 116);
             this.uiSL_Equal.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSL_Equal.Name = "uiSL_Equal";
             this.uiSL_Equal.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
@@ -538,19 +547,19 @@
             this.uiSL_Equal.TabIndex = 16;
             this.uiSL_Equal.TabStop = false;
             // 
-            // uiSL_Sign_Question
+            // uiSL_Oper_Question
             // 
-            this.uiSL_Sign_Question.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSL_Sign_Question.Location = new System.Drawing.Point(329, 231);
-            this.uiSL_Sign_Question.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSL_Sign_Question.Name = "uiSL_Sign_Question";
-            this.uiSL_Sign_Question.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.uiSL_Sign_Question.Size = new System.Drawing.Size(35, 50);
-            this.uiSL_Sign_Question.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSL_Sign_Question.Symbol = 61543;
-            this.uiSL_Sign_Question.SymbolSize = 36;
-            this.uiSL_Sign_Question.TabIndex = 15;
-            this.uiSL_Sign_Question.TabStop = false;
+            this.uiSL_Oper_Question.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSL_Oper_Question.Location = new System.Drawing.Point(329, 116);
+            this.uiSL_Oper_Question.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSL_Oper_Question.Name = "uiSL_Oper_Question";
+            this.uiSL_Oper_Question.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.uiSL_Oper_Question.Size = new System.Drawing.Size(35, 50);
+            this.uiSL_Oper_Question.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSL_Oper_Question.Symbol = 61543;
+            this.uiSL_Oper_Question.SymbolSize = 36;
+            this.uiSL_Oper_Question.TabIndex = 15;
+            this.uiSL_Oper_Question.TabStop = false;
             // 
             // uiTB_Question2
             // 
@@ -560,7 +569,7 @@
             this.uiTB_Question2.Enabled = false;
             this.uiTB_Question2.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Question2.IntValue = 9999;
-            this.uiTB_Question2.Location = new System.Drawing.Point(372, 231);
+            this.uiTB_Question2.Location = new System.Drawing.Point(372, 116);
             this.uiTB_Question2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Question2.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Question2.Name = "uiTB_Question2";
@@ -582,7 +591,7 @@
             this.uiTB_Question1.Enabled = false;
             this.uiTB_Question1.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Question1.IntValue = 9999;
-            this.uiTB_Question1.Location = new System.Drawing.Point(208, 231);
+            this.uiTB_Question1.Location = new System.Drawing.Point(208, 116);
             this.uiTB_Question1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Question1.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Question1.Name = "uiTB_Question1";
@@ -596,24 +605,25 @@
             this.uiTB_Question1.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.uiTB_Question1.Watermark = "";
             // 
-            // uiSl_Sign
+            // uiSl_Oper
             // 
-            this.uiSl_Sign.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSl_Sign.Location = new System.Drawing.Point(995, 291);
-            this.uiSl_Sign.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSl_Sign.Name = "uiSl_Sign";
-            this.uiSl_Sign.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.uiSl_Sign.Size = new System.Drawing.Size(35, 50);
-            this.uiSl_Sign.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSl_Sign.Symbol = 61544;
-            this.uiSl_Sign.SymbolSize = 36;
-            this.uiSl_Sign.TabIndex = 14;
-            this.uiSl_Sign.Click += new System.EventHandler(this.uiSl_Sign_Click);
+            this.uiSl_Oper.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSl_Oper.Location = new System.Drawing.Point(187, 340);
+            this.uiSl_Oper.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSl_Oper.Name = "uiSl_Oper";
+            this.uiSl_Oper.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.uiSl_Oper.Size = new System.Drawing.Size(35, 50);
+            this.uiSl_Oper.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSl_Oper.Symbol = 61544;
+            this.uiSl_Oper.SymbolSize = 36;
+            this.uiSl_Oper.TabIndex = 6;
+            this.uiSl_Oper.TabStop = false;
+            this.uiSl_Oper.Click += new System.EventHandler(this.uiSl_Oper_Click);
             // 
             // uiSL_TotalCount
             // 
             this.uiSL_TotalCount.Font = new System.Drawing.Font("微软雅黑", 24F);
-            this.uiSL_TotalCount.Location = new System.Drawing.Point(1514, 231);
+            this.uiSL_TotalCount.Location = new System.Drawing.Point(951, 107);
             this.uiSL_TotalCount.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSL_TotalCount.Name = "uiSL_TotalCount";
             this.uiSL_TotalCount.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
@@ -622,8 +632,10 @@
             this.uiSL_TotalCount.Symbol = 61568;
             this.uiSL_TotalCount.SymbolSize = 48;
             this.uiSL_TotalCount.TabIndex = 13;
+            this.uiSL_TotalCount.TabStop = false;
             this.uiSL_TotalCount.Text = "总数：100";
             this.uiSL_TotalCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiSL_TotalCount.Visible = false;
             // 
             // uiTB_Ans3_3
             // 
@@ -632,14 +644,14 @@
             this.uiTB_Ans3_3.DoubleValue = 4D;
             this.uiTB_Ans3_3.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans3_3.IntValue = 4;
-            this.uiTB_Ans3_3.Location = new System.Drawing.Point(1137, 392);
+            this.uiTB_Ans3_3.Location = new System.Drawing.Point(329, 441);
             this.uiTB_Ans3_3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans3_3.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans3_3.Name = "uiTB_Ans3_3";
             this.uiTB_Ans3_3.ShowText = false;
             this.uiTB_Ans3_3.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans3_3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans3_3.TabIndex = 9;
+            this.uiTB_Ans3_3.TabIndex = 12;
             this.uiTB_Ans3_3.Text = "4";
             this.uiTB_Ans3_3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans3_3.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -650,7 +662,7 @@
             // uiTB_Ans_M_3
             // 
             this.uiTB_Ans_M_3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_M_3.Location = new System.Drawing.Point(1136, 208);
+            this.uiTB_Ans_M_3.Location = new System.Drawing.Point(328, 257);
             this.uiTB_Ans_M_3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_M_3.Name = "uiTB_Ans_M_3";
             this.uiTB_Ans_M_3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -658,13 +670,14 @@
             this.uiTB_Ans_M_3.Style = Sunny.UI.UIStyle.Custom;
             this.uiTB_Ans_M_3.Symbol = 61713;
             this.uiTB_Ans_M_3.SymbolSize = 8;
-            this.uiTB_Ans_M_3.TabIndex = 12;
+            this.uiTB_Ans_M_3.TabIndex = 18;
+            this.uiTB_Ans_M_3.TabStop = false;
             this.uiTB_Ans_M_3.Click += new System.EventHandler(this.uiTB_Ans_M_3_Click);
             // 
             // uiTB_Ans_M_2
             // 
             this.uiTB_Ans_M_2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_M_2.Location = new System.Drawing.Point(1192, 208);
+            this.uiTB_Ans_M_2.Location = new System.Drawing.Point(384, 257);
             this.uiTB_Ans_M_2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_M_2.Name = "uiTB_Ans_M_2";
             this.uiTB_Ans_M_2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -672,7 +685,8 @@
             this.uiTB_Ans_M_2.Style = Sunny.UI.UIStyle.Custom;
             this.uiTB_Ans_M_2.Symbol = 61713;
             this.uiTB_Ans_M_2.SymbolSize = 8;
-            this.uiTB_Ans_M_2.TabIndex = 10;
+            this.uiTB_Ans_M_2.TabIndex = 17;
+            this.uiTB_Ans_M_2.TabStop = false;
             this.uiTB_Ans_M_2.Click += new System.EventHandler(this.uiTB_Ans_M_2_Click);
             // 
             // uiTB_Ans1_3
@@ -682,14 +696,14 @@
             this.uiTB_Ans1_3.DoubleValue = 4D;
             this.uiTB_Ans1_3.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans1_3.IntValue = 4;
-            this.uiTB_Ans1_3.Location = new System.Drawing.Point(1137, 231);
+            this.uiTB_Ans1_3.Location = new System.Drawing.Point(329, 280);
             this.uiTB_Ans1_3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans1_3.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans1_3.Name = "uiTB_Ans1_3";
             this.uiTB_Ans1_3.ShowText = false;
             this.uiTB_Ans1_3.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans1_3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans1_3.TabIndex = 2;
+            this.uiTB_Ans1_3.TabIndex = 3;
             this.uiTB_Ans1_3.Text = "4";
             this.uiTB_Ans1_3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans1_3.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -704,14 +718,14 @@
             this.uiTB_Ans3_1.DoubleValue = 4D;
             this.uiTB_Ans3_1.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans3_1.IntValue = 4;
-            this.uiTB_Ans3_1.Location = new System.Drawing.Point(1247, 392);
+            this.uiTB_Ans3_1.Location = new System.Drawing.Point(439, 441);
             this.uiTB_Ans3_1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans3_1.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans3_1.Name = "uiTB_Ans3_1";
             this.uiTB_Ans3_1.ShowText = false;
             this.uiTB_Ans3_1.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans3_1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans3_1.TabIndex = 7;
+            this.uiTB_Ans3_1.TabIndex = 10;
             this.uiTB_Ans3_1.Text = "4";
             this.uiTB_Ans3_1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans3_1.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -726,14 +740,14 @@
             this.uiTB_Ans3_2.DoubleValue = 4D;
             this.uiTB_Ans3_2.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans3_2.IntValue = 4;
-            this.uiTB_Ans3_2.Location = new System.Drawing.Point(1192, 392);
+            this.uiTB_Ans3_2.Location = new System.Drawing.Point(384, 441);
             this.uiTB_Ans3_2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans3_2.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans3_2.Name = "uiTB_Ans3_2";
             this.uiTB_Ans3_2.ShowText = false;
             this.uiTB_Ans3_2.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans3_2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans3_2.TabIndex = 8;
+            this.uiTB_Ans3_2.TabIndex = 11;
             this.uiTB_Ans3_2.Text = "4";
             this.uiTB_Ans3_2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans3_2.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -748,14 +762,14 @@
             this.uiTB_Ans2_1.DoubleValue = 4D;
             this.uiTB_Ans2_1.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans2_1.IntValue = 4;
-            this.uiTB_Ans2_1.Location = new System.Drawing.Point(1247, 291);
+            this.uiTB_Ans2_1.Location = new System.Drawing.Point(439, 340);
             this.uiTB_Ans2_1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans2_1.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans2_1.Name = "uiTB_Ans2_1";
             this.uiTB_Ans2_1.ShowText = false;
             this.uiTB_Ans2_1.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans2_1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans2_1.TabIndex = 6;
+            this.uiTB_Ans2_1.TabIndex = 9;
             this.uiTB_Ans2_1.Text = "4";
             this.uiTB_Ans2_1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans2_1.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -770,14 +784,14 @@
             this.uiTB_Ans2_2.DoubleValue = 4D;
             this.uiTB_Ans2_2.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans2_2.IntValue = 4;
-            this.uiTB_Ans2_2.Location = new System.Drawing.Point(1192, 291);
+            this.uiTB_Ans2_2.Location = new System.Drawing.Point(384, 340);
             this.uiTB_Ans2_2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans2_2.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans2_2.Name = "uiTB_Ans2_2";
             this.uiTB_Ans2_2.ShowText = false;
             this.uiTB_Ans2_2.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans2_2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans2_2.TabIndex = 5;
+            this.uiTB_Ans2_2.TabIndex = 8;
             this.uiTB_Ans2_2.Text = "4";
             this.uiTB_Ans2_2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans2_2.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -792,14 +806,14 @@
             this.uiTB_Ans1_1.DoubleValue = 4D;
             this.uiTB_Ans1_1.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans1_1.IntValue = 4;
-            this.uiTB_Ans1_1.Location = new System.Drawing.Point(1247, 231);
+            this.uiTB_Ans1_1.Location = new System.Drawing.Point(439, 280);
             this.uiTB_Ans1_1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans1_1.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans1_1.Name = "uiTB_Ans1_1";
             this.uiTB_Ans1_1.ShowText = false;
             this.uiTB_Ans1_1.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans1_1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans1_1.TabIndex = 4;
+            this.uiTB_Ans1_1.TabIndex = 5;
             this.uiTB_Ans1_1.Text = "4";
             this.uiTB_Ans1_1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans1_1.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -814,14 +828,14 @@
             this.uiTB_Ans1_2.DoubleValue = 4D;
             this.uiTB_Ans1_2.Font = new System.Drawing.Font("微软雅黑", 28F);
             this.uiTB_Ans1_2.IntValue = 4;
-            this.uiTB_Ans1_2.Location = new System.Drawing.Point(1192, 231);
+            this.uiTB_Ans1_2.Location = new System.Drawing.Point(384, 280);
             this.uiTB_Ans1_2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTB_Ans1_2.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTB_Ans1_2.Name = "uiTB_Ans1_2";
             this.uiTB_Ans1_2.ShowText = false;
             this.uiTB_Ans1_2.Size = new System.Drawing.Size(35, 50);
             this.uiTB_Ans1_2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTB_Ans1_2.TabIndex = 3;
+            this.uiTB_Ans1_2.TabIndex = 4;
             this.uiTB_Ans1_2.Text = "4";
             this.uiTB_Ans1_2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTB_Ans1_2.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -836,7 +850,7 @@
             this.uiIBtn_Turtle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.uiIBtn_Turtle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiIBtn_Turtle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiIBtn_Turtle.Location = new System.Drawing.Point(844, 800);
+            this.uiIBtn_Turtle.Location = new System.Drawing.Point(476, 780);
             this.uiIBtn_Turtle.Name = "uiIBtn_Turtle";
             this.uiIBtn_Turtle.Size = new System.Drawing.Size(209, 217);
             this.uiIBtn_Turtle.Style = Sunny.UI.UIStyle.Custom;
@@ -847,7 +861,7 @@
             // uiTB_Ans_P_3
             // 
             this.uiTB_Ans_P_3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_P_3.Location = new System.Drawing.Point(1154, 332);
+            this.uiTB_Ans_P_3.Location = new System.Drawing.Point(346, 381);
             this.uiTB_Ans_P_3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_P_3.Name = "uiTB_Ans_P_3";
             this.uiTB_Ans_P_3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -855,13 +869,14 @@
             this.uiTB_Ans_P_3.Style = Sunny.UI.UIStyle.Custom;
             this.uiTB_Ans_P_3.Symbol = 61713;
             this.uiTB_Ans_P_3.SymbolSize = 8;
-            this.uiTB_Ans_P_3.TabIndex = 13;
+            this.uiTB_Ans_P_3.TabIndex = 21;
+            this.uiTB_Ans_P_3.TabStop = false;
             this.uiTB_Ans_P_3.Click += new System.EventHandler(this.uiTB_Ans_P_3_Click);
             // 
             // uiTB_Ans_P_2
             // 
             this.uiTB_Ans_P_2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTB_Ans_P_2.Location = new System.Drawing.Point(1214, 332);
+            this.uiTB_Ans_P_2.Location = new System.Drawing.Point(406, 381);
             this.uiTB_Ans_P_2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTB_Ans_P_2.Name = "uiTB_Ans_P_2";
             this.uiTB_Ans_P_2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -869,7 +884,8 @@
             this.uiTB_Ans_P_2.Style = Sunny.UI.UIStyle.Custom;
             this.uiTB_Ans_P_2.Symbol = 61713;
             this.uiTB_Ans_P_2.SymbolSize = 8;
-            this.uiTB_Ans_P_2.TabIndex = 11;
+            this.uiTB_Ans_P_2.TabIndex = 20;
+            this.uiTB_Ans_P_2.TabStop = false;
             this.uiTB_Ans_P_2.Click += new System.EventHandler(this.uiTB_Ans_P_2_Click);
             // 
             // uiLine1
@@ -878,7 +894,7 @@
             this.uiLine1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLine1.LineCapSize = 1;
             this.uiLine1.LineSize = 5;
-            this.uiLine1.Location = new System.Drawing.Point(996, 351);
+            this.uiLine1.Location = new System.Drawing.Point(188, 400);
             this.uiLine1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLine1.Name = "uiLine1";
             this.uiLine1.Size = new System.Drawing.Size(289, 32);
@@ -893,9 +909,9 @@
             this.uiIBtn_Flag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.uiIBtn_Flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiIBtn_Flag.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiIBtn_Flag.Location = new System.Drawing.Point(1678, 689);
+            this.uiIBtn_Flag.Location = new System.Drawing.Point(1143, 761);
             this.uiIBtn_Flag.Name = "uiIBtn_Flag";
-            this.uiIBtn_Flag.Size = new System.Drawing.Size(225, 275);
+            this.uiIBtn_Flag.Size = new System.Drawing.Size(110, 203);
             this.uiIBtn_Flag.Style = Sunny.UI.UIStyle.Custom;
             this.uiIBtn_Flag.TabIndex = 4;
             this.uiIBtn_Flag.TabStop = false;
@@ -905,7 +921,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 998);
+            this.ClientSize = new System.Drawing.Size(1264, 998);
             this.Controls.Add(this.uiPanel1);
             this.Name = "MainForm";
             this.Text = "Kettle学数学";
@@ -942,10 +958,10 @@
         private Sunny.UI.UISymbolLabel uiSymbolLabel10;
         private Sunny.UI.UISymbolLabel uiSymbolLabel9;
         private Sunny.UI.UISymbolLabel uiSL_Equal;
-        private Sunny.UI.UISymbolLabel uiSL_Sign_Question;
+        private Sunny.UI.UISymbolLabel uiSL_Oper_Question;
         private Sunny.UI.UITextBox uiTB_Question2;
         private Sunny.UI.UITextBox uiTB_Question1;
-        private Sunny.UI.UISymbolLabel uiSl_Sign;
+        private Sunny.UI.UISymbolLabel uiSl_Oper;
         private Sunny.UI.UISymbolLabel uiSL_TotalCount;
         private Sunny.UI.UITextBox uiTB_Ans3_3;
         private Sunny.UI.UISymbolButton uiSBtn_Ok1;
